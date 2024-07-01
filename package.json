@@ -10,12 +10,17 @@
     "install:server": "npm install --prefix server",
     "install:client": "npm install --prefix client",
     "install:all": "npm run install:server && npm run install:client",
-    "build:all": "npm run build:server"
+    "build:all": "npm run build:server && npm run build:client",
+    "start:all": "concurrently \"npm run start:server\" \"npm run start:client\"",
+    "start:all-sequential": "npm run start:server && npm run start:client"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
