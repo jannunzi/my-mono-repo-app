@@ -1,0 +1,21 @@
+{
+  "name": "my-mono-repo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "npm --prefix server start",
+    "start:client": "npm --prefix client start",
+    "build:server": "npm --prefix server run build",
+    "install:server": "npm install --prefix server",
+    "install:client": "npm install --prefix client",
+    "install:all": "npm run install:server && npm run install:client",
+    "build:all": "npm run build:server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}
